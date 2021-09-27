@@ -1,4 +1,6 @@
 var colors = ["Blue", "Red", "Green", "Yellow", "Purple", "Pink", "Orange", "Turquoise"];
+
+//If button is clicked this function starts the clock and whole game
 function startGame(){
     subTop.style.display = "flex";
     stop.style.display = "block";
@@ -6,11 +8,10 @@ function startGame(){
     setInterval(timer, 1000);
     reset();
 }
+//If button is clicked this function ends the game
 function stopGame(){
     location.reload();
 }
-// var checkmark = document.getElementById("checkmark");
-// var wrong = document.getElementById("wrong");
 var correct = document.getElementById("points");
 var subTop = document.getElementById("subTop");
 var title = document.getElementById("title");
@@ -18,7 +19,7 @@ var stop = document.getElementById("stop");
 var correctInt = 0
 
 function reset(){
-    //To slate either or as color or word
+    //If statment that changes either or as color or word...
     var random1 = Math.floor(Math.random() * 2);
     if(random1==0){
         var color1 = document.getElementById("color1");
@@ -31,6 +32,7 @@ function reset(){
     document.getElementById("start").style.display = "none";
     //Choose a color from the index at random
     var random = Math.floor(Math.random() * 8);
+    console.log(random);
     var correctAnswer = colors[random];
     //Change the word to correct color
     color1.innerHTML = correctAnswer;
@@ -38,12 +40,12 @@ function reset(){
     color2.style.color = correctAnswer;
     //If statemens to change the residing words and color diffrent from the answer
     if(random+1==8){
-        color2.innerHTML = colors[random-3];
+        color2.innerHTML = colors[random-4];
     }else{
         color2.innerHTML = colors[random+1];
     }
     if(random-1==-1){
-        color1.style.color = colors[random+3];
+        color1.style.color = colors[random+4];
     }else{
         color1.style.color = colors[random-1];
     }
@@ -70,14 +72,7 @@ function addClick(color, correctAnswer){
 function checkColor(color, correctAnswer){
     if(color===correctAnswer){
         correctInt++;
-    //     checkmark.classList.add("fadeAway");
-    // }else{
-    //     wrong.classList.add("fadeAway");
     }
-    // setTimeout(function(){
-    //     checkmark.classList.remove("fadeAway");
-    //     wrong.classList.remove("fadeAway");
-    // },500);
     reset();
     correct.innerHTML = correctInt;
 }
