@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>Color Guess</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="icon/favicon.ico">
+    </head>
+    <body>
+        <button id="stop" onclick="stopGame()">X</button>
+        <div class="top">
+            <button id="start" onclick="startGame()">Start</button>
+            <div id="subTop">
+                <span id="color1" class="colorText color1"></span>
+                <span id="color2" class="colorText color2"></span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="Red" class="color red"></span>
+            <span id="Orange" class="color orange"></span>
+            <span id="Yellow" class="color yellow"></span>
+            <span id="Pink" class="color pink"></span>
+            <span class="block timerSlot">
+                <span id="time"></span>
+                <h2 id="title"><img src="icon/icon.png" height="50">Color Guess</h2>
+            </span>
+            <span id="Green" class="color green"></span>
+            <span id="Purple" class="color purple"></span>
+            <span id="Blue" class="color blue"></span>
+            <span id="Turquoise" class="color turquoise"></span>
+        </div>
+        <span id="points"></span>
+    </body>
+    <script src="js/script.js"></script>
+</html>
