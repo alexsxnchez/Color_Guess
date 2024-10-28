@@ -11,7 +11,7 @@ body {
     margin: auto;
     font-family:"Nunito Sans",sans-serif;
     text-align: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color:hsla(23,100%,63%,1);
     background-image:
@@ -262,6 +262,8 @@ body {
 @media only screen and (max-width: 600px){
     .color__box_container {
         width: unset;
+        top: 30%;
+        transform: translate(-50%, -30%);
     }
     .color__box {
         width: 300px;
@@ -289,16 +291,7 @@ body {
         width: 350px;
     }
     .colorText {
-        padding: 11px 0;
-    }
-    #start, #stop, #restart {
-        font-size: 20px;
-    }
-    #start {
-        padding: 12px 25px;
-    }
-    #stop, #restart {
-        padding: 0 13px;
+        padding: 19px 0;
     }
     .counted__score_type {
         padding: 20px 20px 20px 0;
